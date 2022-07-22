@@ -1,11 +1,15 @@
-let balance = 1000
-let pin = 1111
-const balanceCheck = (amount, input) => {
-    if (amount <= balance && pin -- input) {
-        console.log(`You have withdrawn ${amount}`)
-    } else {
-        console.log("You don't have enough money")
-    }
-}
+let balance = 9000;
 
-balanceCheck(1100)
+let atm = (pin, value) => {
+    if (pin === 5980 && value <= balance){
+        balance -= value;
+        console.log(Withdrew ${value}. New balance: ${balance}.)
+   }else if (value > balance){
+    console.log(You are trying to withdraw ${value}. Your available balance is ${balance}.)
+   }else {
+    console.log("Incorrect pin")
+   }
+}
+atm(5980, 500);
+atm(5980, 9500);
+atm(7504, 100);
